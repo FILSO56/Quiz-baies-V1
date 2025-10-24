@@ -68,7 +68,7 @@
 </head>
 <body>
 <div class="container" id="game">
-  <img src="groseille.png" alt="Illustration des baies">
+  <img src="image.png" alt="Illustration des baies">
   <h1>Quiz des Baies</h1>
   <button onclick="startGame()">Commencer</button>
 </div>
@@ -76,29 +76,22 @@
 
 <script>
 const quiz1 = [
-  { q: "La fraise est une baie ?", a: false, exp: "Non, c’est un faux-fruit !", img: "fraise.jpg" },
-  { q: "La myrtille est une baie ?", a: true, exp: "Oui, c’est une vraie baie botanique.", img: "myrtille.jpg" },
-  { q: "La mûre est une baie ?", a: false, exp: "Non, c’est une drupelette (un fruit agrégé).", img: "mure.JPG" },
-  { q: "La banane est une baie ?", a: true, exp: "Oui, c’est une baie issue de l’ovaire.", img: "banane.JPG" },
-  { q: "La tomate est une baie ?", a: true, exp: "Oui, c’est un exemple classique de baie.", img: "tomate.jpg" },
-  { q: "Le raisin est une baie ?", a: true, exp: "Oui, chaque grain est une baie.", img: "raisin.JPG" },
-  { q: "La courgette est une baie ?", a: true, exp: "Oui, la courgette est une baie particulière appelée péponide.", img: "courgette.JPG" },
-  { q: "L’avocat est une baie ?", a: true, exp: "Oui, c’est une baie à graine unique.", img: "avocat.jpg" },
-  { q: "La cerise est une baie ?", a: false, exp: "Non, c’est une drupe (avec un noyau à l’intérieur).", img: "cerise.jpg" },
-  { q: "Le kiwi est une baie ?", a: true, exp: "Oui, c’est une grosse baie charnue.", img: "kiwi.jpg" }
+  { q: "La fraise est une baie ?", a: false, exp: "Non, c’est un faux-fruit issu du réceptacle floral.", img: "fraise.png" },
+  { q: "La myrtille est une baie ?", a: true, exp: "Oui, c’est une vraie baie charnue avec plusieurs graines incluses dans la pulpe.", img: "myrtille.png" },
+  { q: "La mûre sauvage est une baie ?", a: false, exp: "Non, c’est un fruit multiple formé de plusieurs petites drupes, chacune ayant un noyau.", img: "mure.png" },
+  { q: "La courgette est une baie ?", a: true, exp: "Oui, la courgette est une baie particulière appelée péponide.", img: "courgette.png" },
+  { q: "L'avocat est une baie ?", a: true, exp: "Oui, c’est une baie, un fruit charnu à graine unique.", img: "avocat.png" },
+  { q: "La cerise est une baie ?", a: false, exp: "Non, c’est une drupe avec un noyau à l’intérieur.", img: "cerise.png" },
+  { q: "Le kiwi est une baie ?", a: true, exp: "Oui, c’est une grosse baie charnue contenant de très nombreuses graines.", img: "kiwi.png" }
 ];
 
 const quiz2 = [
-  { q: "Faut-il être sûr à 100% de l’identité d’une baie avant de la manger ?", a: true, exp: "Oui, certaines baies sont toxiques.", img: "toxique.JPG" },
-  { q: "Cueillir toutes les baies d’un buisson est une bonne pratique ?", a: false, exp: "Non, il faut en laisser pour les animaux et la régénération.", img: "régénération.jpg" },
-  { q: "Certaines baies rouges peuvent être toxiques ?", a: true, exp: "Oui, par exemple l'if ou le houx.", img: "houx.jpg" },
-  { q: "Peut-on cueillir des baies dans une réserve naturelle protégée ?", a: false, exp: "Non, c’est interdit par la loi.", img: "cueillette.png" },
-  { q: "Laver les baies avant de les consommer est recommandé ?", a: true, exp: "Oui, pour éliminer microbes, poussières et parasites.", img: "rincer.jpg" },
-  { q: "Cueillir les baies encore vertes est une bonne pratique ?", a: false, exp: "Non, il faut attendre leur maturité.", img: "baies_vertes.jpg" },
-  { q: "Je vois un oiseau manger une baie, puis-je en faire autant sans risquer d'être malade?", a: true, exp: "Non, ce qui est bon pour un autre animal peut être toxique pour l'être humain.", img: "oiseau.jpg" },
-  { q: "Écraser les branches et piétiner les plants en cueillant est acceptable ?", a: false, exp: "Non, cela abîme la plante et l’environnement.", img: "piétiner.png" },
-  { q: "Certaines personnes peuvent avoir des réactions allergiques aux baies ?", a: true, exp: "Oui, certaines personnes peuvent souffrir de démengeaisons dans la bouche ou d'urticaire par exemple.", img: "démangeaisons.jpg" },
-  { q: "Il est prudent de goûter une baie inconnue pour savoir si elle est comestible ?", a: false, exp: "Non, il ne faut jamais goûter une baie inconnue.", img: "attention.png" }
+  { q: "Faut-il être sûr à 100% de l’identité d’une baie avant de la manger ?", a: true, exp: "Oui, certaines baies sont toxiques. En cas de doute, ne pas consommer.", img: "houx.png" },
+  { q: "Certaines baies rouges peuvent être toxiques ?", a: true, exp: "Oui, par exemple le houx, ou la douce-amère.", img: "douce.png" },
+  { q: "Peut-on cueillir des baies dans une réserve naturelle protégée ?", a: false, exp: "Non, c’est interdit par la loi.", img: "rndf.png" },
+  { q: "Faut-il photographier sa cueillette ?", a: true, exp: "Oui, pour en faciliter l'identification en cas d'intoxication.", img: "photo.png" },
+  { q: "Cueillir les baies immatures est une bonne pratique ?", a: false, exp: "Non, il faut attendre leur maturité, car elles peuvent être toxiques.", img: "vertes.png" },
+  { q: "Je vois un oiseau manger une baie, puis-je en faire autant ?", a: false, exp: "Non, ce qui est bon pour un animal peut être toxique pour nous.", img: "oiseau.png" },
 ];
 
 const allQuizzes = [quiz1, quiz2];
@@ -168,7 +161,7 @@ function showResult() {
     gameDiv.innerHTML = `
       <h2>🎉 Fin du jeu ! 🎉</h2>
       <p>Ton score final : <strong>${score}/${total}</strong></p>
-      <p>${score >= 15 ? "Bravo, tu es un expert en baies et en cueillette responsable ! 🏆" : "Pas mal, mais tu peux encore progresser 😉"}</p>
+      <p>${score >= 11 ? "Bravo, tu es un expert en baies et en cueillette responsable ! 🏆" : "Pas mal, mais tu peux encore progresser 😉"}</p>
       <button onclick="startGame()">Rejouer</button>
       <div class="progress"><div class="bar" style="width:${progress}%"></div></div>
     `;
@@ -177,4 +170,5 @@ function showResult() {
 }
 </script>
 </body>
+
 </html>
